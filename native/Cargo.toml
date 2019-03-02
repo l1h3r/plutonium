@@ -1,0 +1,17 @@
+[package]
+name = "plutonium"
+version = "0.1.0"
+authors = ["l1h3r"]
+license = "MIT"
+build = "build.rs"
+exclude = ["artifacts.json", "index.node"]
+
+[lib]
+name = "plutonium"
+crate-type = ["dylib"]
+
+[build-dependencies]
+neon-build = "0.2.0"
+
+[dependencies]
+neon = "0.2.0"
