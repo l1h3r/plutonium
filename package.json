@@ -6,7 +6,8 @@
   "author": "l1h3r",
   "license": "MIT",
   "dependencies": {
-    "ffi": "^2.3.0"
+    "ffi": "^2.3.0",
+    "@nimiq/core": "^1.4.3"
   },
   "scripts": {
     "start": "node lib/index.js"
