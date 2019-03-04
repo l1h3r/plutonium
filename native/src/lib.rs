@@ -1,6 +1,3 @@
-#[macro_use]
-extern crate neon;
-
 pub mod config;
 pub mod error;
 pub mod ffi;
@@ -9,12 +6,14 @@ pub mod miner;
 pub mod opencl;
 pub mod utils;
 
-use neon::prelude::*;
+use crate::miner::Miner;
 
-fn hello(mut cx: FunctionContext) -> JsResult<JsString> {
-  Ok(cx.string("hello node"))
+#[no_mangle]
+pub extern "C" fn miner() -> Miner {
+  Miner::new()
 }
 
-register_module!(mut cx, {
-  cx.export_function("hello", hello)
-});
+#[no_mangle]
+pub extern "C" fn test() -> i32 {
+  0
+}

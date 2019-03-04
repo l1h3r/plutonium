@@ -6,9 +6,9 @@
   "author": "l1h3r",
   "license": "MIT",
   "dependencies": {
-    "neon-cli": "^0.2.0"
+    "ffi": "^2.3.0"
   },
   "scripts": {
-    "install": "neon build"
+    "start": "node lib/index.js"
   }
 }

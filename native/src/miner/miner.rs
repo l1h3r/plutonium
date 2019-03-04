@@ -49,10 +49,9 @@ impl Miner {
 }
 
 impl Miner {
-  fn seed() -> [u8; INITIAL_SEED_SIZE] {
-    let mut seed = [0; INITIAL_SEED_SIZE];
+  pub fn seed() -> [u8; INITIAL_SEED_SIZE] {
     // TODO
-    seed
+    [0; INITIAL_SEED_SIZE]
   }
 
   #[inline]
